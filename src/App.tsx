@@ -23,8 +23,9 @@ const App = () => {
   const loadPosts = async () => {
     setLoading(true)
     let json = await api.getAll()
-    setPosts(json)
     setLoading(false)
+    setPosts(json)
+
   }
 
   const handleAddPost = async (title: string, body: string) => {
